@@ -1,0 +1,18 @@
+type Artist {
+  id: ID!
+  name: String!
+  lastName: String!
+  nickName: String!
+  genre: String!
+}
+
+type Query {
+  findAllArtists: [Artist]!
+  countArtists: Int!
+}
+
+type Mutation {
+  newArtist(name: String!, lastName: String!, nickName: String!, genre: String!): Artist!
+  deleteArtist(id: ID!): Boolean
+  updateArtist(id: ID!, name: String!, lastName: String!, nickName: String!, genre: String!): Artist!
+}
